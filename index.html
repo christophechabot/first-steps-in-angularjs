@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body ng-app="myApp">
+ 
+ 
+<div ng-controller="myCtrl">
+    
+    <input type="text" ng-model="text" />
+    
+    <button ng-click="addColor()">Add color</button>
+    
+    <p ng-show="text!=''" ng-class="{'long': text.length>=10}">Text: {{text}}</p>  
+    
+    <div>
+        <ul>
+            <li ng-repeat="(index, color) in colors track by index">
+                {{index + ": " + color}}
+                <span ng-style="{'background-color': color}"></span>
+            </li>
+            
+        </ul>
+        
+        
+    </div>
+    
+</div>
+
+
+
+
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+body, html {
+    font-size: 20px;
+}
+
+input {
+    display: inline-block;
+    margin: 1rem auto;
+}
+
+p {
+    margin: 0 1rem;
+}
+
+p.long {
+    font-weight: bold;
+    color: #ff4444;
+}
+
+ul {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    width: auto;
+    list-style-type: none;
+    cursor: pointer;
+    margin: .8rem 0;
+    padding-left: 40px;
+}
+
+li span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+button {
+    margin-left: 1rem;
+    border-radius: .5rem;
+    background-color: #fff; 
+    color: #639596;
+    border: 1px solid #639596;
+    padding: 2px .4rem;
+    background-color: #639596; 
+    color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #639596; 
+    color: #fff;
+    background-color: #fff; 
+    color: #639596;
+}
+
+nav {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+nav a {
+    color: #383838;
+    margin: 0 .5rem;
+}    
+
+nav a:hover {
+    color: #383838;
+}
+
+div {
+    text-align: center;
+}
