@@ -5,21 +5,32 @@
     <title>Untitled Document</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+
+<!-- Attach the Angular app to the part of the document you want
+     Here, we have only one app, we can attach it to the body -->
 <body ng-app="myApp">
  
- 
+<!-- Bind the controller to the part of the document you want --> 
 <div ng-controller="myCtrl">
     
+    <!-- Bind a model to an input to allow 2-way data binding with a simple variable like a string -->
     <input type="text" ng-model="text" />
     
+    <!-- Bind an onclick listener with ng-click -->	
     <button ng-click="addColor()">Add color</button>
     
+    <!-- Show an element according to a JavaScript expression with ng-show
+     Toggle CSS classes dynamically with ng-class -->
     <p ng-show="text!=''" ng-class="{'long': text.length>=10}">Text: {{text}}</p>  
     
     <div>
         <ul>
+           <!-- Allow 2-way data binding with an array (or object) with ng-repeat
+		 Track by index to avoid duplicates -->	
             <li ng-repeat="(index, color) in colors track by index">
                 {{index + ": " + color}}
+                
+                <!-- Change CSS properties dynamically with ng-style -->	
                 <span ng-style="{'background-color': color}"></span>
             </li>
             
